@@ -29,7 +29,7 @@ const telBotSender = new TelBotSender()
 
 $(document).ready(() => {
     const botID = localStorage.getItem('botID')
-    const chatID = localStorage.getItem('botID')
+    const chatID = localStorage.getItem('chatID')
     botID && $('#botID').val(botID)
     chatID && $('#chatID').val(chatID)
 })
