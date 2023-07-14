@@ -5,7 +5,7 @@ class TelBotSender {
         const chatID = $('#chatID').val().trim()
         const text = $('#messageText').val().trim()
 
-        if (!botID && !text) return alert('Введите id или текст')
+        if (!botID || !chatID || !text) return alert('Введите id или текст')
 
         const url = `https://api.telegram.org/bot${botID}/sendMessage`
         
