@@ -20,7 +20,16 @@ class TelBotSender {
         console.log('data', data)
         alert('Сообщение отправлено')
         $('#messageText').val('')
+        localStorage.setItem('botID', botID)
+        localStorage.setItem('chatID', chatID)
     }
 }
 
 const telBotSender = new TelBotSender()
+
+$(document).ready(() => {
+    const botID = localStorage.getItem('botID')
+    const chatID = localStorage.getItem('botID')
+    botID && $('#botID').val(botID)
+    chatID && $('#chatID').val(chatID)
+})
