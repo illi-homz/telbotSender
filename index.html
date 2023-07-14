@@ -13,20 +13,22 @@
     <body>
         <div class="container">
             <h1>Привет, отправь сообщение</h1>
-            <form autocomplete="on">
+            <form autocomplete="off">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Telegram Bot ID</label>
-                    <input type="text" class="form-control" id="botID" />
+                    <input type="text" class="form-control" id="botID" autocomplete="off" />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Chat ID</label>
-                    <input type="text" class="form-control" id="chatID" />
+                    <input type="text" class="form-control" id="chatID" autocomplete="off" />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Текст сообщения</label>
-                    <textarea class="form-control" id="messageText"></textarea>
+                    <textarea class="form-control" id="messageText" autocomplete="off"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" onclick="telBotSender.sendMessage(event)">Отправить</button>
+                <button type="submit" class="btn btn-primary" onclick="telBotSender.sendMessage(event)">
+                    Отправить
+                </button>
             </form>
         </div>
         <script
