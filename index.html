@@ -13,20 +13,18 @@
     <body>
         <div class="container">
             <h1>Привет, отправь сообщение</h1>
-            <form>
+            <form autocomplete>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Telegram Bot ID</label>
-                    <input type="email" class="form-control" id="botID" aria-describedby="emailHelp" />
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <input type="text" class="form-control" id="botID" />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Chat ID</label>
-                    <input type="email" class="form-control" id="chatID" aria-describedby="emailHelp" />
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <input type="text" class="form-control" id="chatID" />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Текст сообщения</label>
-                    <textarea class="form-control" aria-label="With textarea" id="messageText"></textarea>
+                    <textarea class="form-control" id="messageText"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" onclick="telBotSender.sendMessage(event)">Отправить</button>
             </form>
